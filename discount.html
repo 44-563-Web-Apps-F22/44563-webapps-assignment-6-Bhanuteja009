@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bhanu's discount page</title>
+     </head>
+<body>
+
+    <h1>Bhanuteja Chitrala Computes discounts</h1>
+<h2>Getting input</h2>
+
+<form>
+    <label for="form1_age">Enter base amount </label>
+    <input type ="number" id="base_amount" name="form1_age" value=20> <br>
+
+    <label for="form1_nick">Enter the discount percentage </label>
+    <input type ="text" id="discount_amount" name="form1_nick" value=10> <br>
+
+    <input type="button" onclick="discount()" value="Apply discount">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+
+function discount (){
+    
+    baseAmount = document.getElementById("base_amount").value
+    let actualValue=baseAmount
+    discountAmount = document.getElementById("discount_amount").value
+    let result=""
+    baseAmount-=baseAmount*discountAmount/100
+    for (let index = 1; index <=5; index++) {
+       result+=baseAmount*index;
+       result+=" "
+        
+    }
+    
+    out = document.getElementById("result").innerHTML="Discounted amounts for base "+actualValue+" are "+result
+    
+}
+</script>
+
+</body>
+</html> 
