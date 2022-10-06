@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"   
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" 
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
     <title>Bhanu's java script demo</title>
  </head>
 <body>
@@ -10,10 +19,10 @@
 
 <form>
     <label for="musician_name" class="col-form-label">Enter the secret musician name </label>
-    <input type ="password" id="musician_name" name="musician_name" value="John Lennon"> <br>
+    <input type ="password" class="form-control" id="musician_name" name="musician_name" value="John Lennon"> <br>
 
     <label for="musician_text" class="col-form-label">Guess the musician</label>
-    <input type ="text" id="musician_text" name="musician_text"> <br>
+    <input type ="text" class="form-control" id="musician_text" name="musician_text"> <br>
 
     <input type="button" onclick=" checkGuess()" value="Check the guess">
 </form>
