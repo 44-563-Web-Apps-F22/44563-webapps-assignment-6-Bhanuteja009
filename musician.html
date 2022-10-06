@@ -9,10 +9,10 @@
 <h2>Getting input</h2>
 
 <form>
-    <label for="musician_name">Enter the secret musician name </label>
+    <label for="musician_name" class="col-form-label">Enter the secret musician name </label>
     <input type ="password" id="musician_name" name="musician_name" value="John Lennon"> <br>
 
-    <label for="musician_text">Guess the musician</label>
+    <label for="musician_text" class="col-form-label">Guess the musician</label>
     <input type ="text" id="musician_text" name="musician_text"> <br>
 
     <input type="button" onclick=" checkGuess()" value="Check the guess">
@@ -29,22 +29,32 @@
 
 let correct=0;
 let wrong=0;
+count=0;
 function  checkGuess(){
 
     pwd=document.getElementById("musician_name").value
     guess=document.getElementById("musician_text").value
-
+    
     output=document.getElementById("result")
     if(pwd==guess){
+        count=0;
         correct=correct+1
         alert("You got it right")
     }
     else{
+        count=count+1;
         wrong=wrong+1
         alert("Wrong Musician")
     }
-
+    if(count>=3){
+        if(wrong>=3){
+            displayAlert();
+        }
+    }
     output.innerHTML="The count of the correct one's "+correct+". The count of wrong one's "+wrong
+}
+function displayAlert(){
+    alert("Sorry, game over.");
 }
 
 </script>
